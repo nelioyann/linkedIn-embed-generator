@@ -1,0 +1,19 @@
+// This function takes a hex code and return rgb values
+@function hexToRGB($hex) {
+  @return red($hex),
+  green($hex),
+  blue($hex);
+}
+
+
+@mixin mq-above($arg) {
+  @media screen and (min-width: $arg) {
+    @content;
+  }
+}
+
+@mixin mq-under($arg) {
+  @media screen and (max-width: $arg) {
+    @content;
+  }
+}

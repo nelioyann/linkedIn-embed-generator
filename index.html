@@ -5,12 +5,47 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LinkedIn Embed Generator</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-  <header>
-    <h1>LinkedIn Embed Generator</h1>
+  <header class="border-b flex flex-jc-sb flex-ai-c" >
+    <h1 >LinkedIn Embed Generator</h1>
+    <a href="https://www.yannicknana.fr/#contact" target="_blank">Contact me</a>
   </header>
+  <p>Embed LinkedIn Posts on your website</p>
+  <main>
+    <form class="generator">
+      <h2 class="border-b">Link to your LinkedIn post 📄</h2>
+      <label class="flex flex-d-c" for="">
+        <span>Enter the Linkedin post Link here</span>
+        <input required placeholder="https://www.linkedin.com/posts/..." class="generator_input" type="text">
+      </label>
+      <button>Generate</button>
+    </form>
+    <div class="generated hidden">
+      <div class="code_wrapper">
+        <h2 class="border-b">Embed code</h2>
+        <p>Copy and insert this code on your website </p>
+        <div class="code_container">
+          <pre class="code"></pre>
+        </div>
+        <button class="copier">Copy the code</button>
+      </div>
+      <div class="preview_wrapper">
+        <h2 class="border-b">Preview </h2>
+        <p>This a preview of your embed</p>
+        <div class="preview"></div>
+      </div>
+
+    </div>
+  </main>
+  <footer class="border-t">
+    <span>Built by
+      <a href="https://yannicknana.fr">Yannick Nana</a> 
+    </span>
+  </footer>
   <script src="./script.js"></script>
 </body>
 </html>

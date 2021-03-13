@@ -1,0 +1,51 @@
+.flex {
+    display: flex;
+
+    &-jc-c {
+        justify-content: center;
+    }
+
+    &-jc-sb {
+        justify-content: space-between;
+    }
+
+    &-ai-c {
+        align-items: center;
+    }
+
+    &-d-c {
+        flex-direction: column;
+    }
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+
+    .span-12{
+        grid-column: span 12;
+    }
+    .span-6{
+        grid-column: span 6;
+    }
+}
+
+
+
+.gap{
+    gap: 1em;
+}
+
+
+.hide-for-mobile {
+    @include mq-under($breakpoint-mobile) {
+        display: none;
+    }
+}
+
+
+.hide-for-desktop {
+    @include mq-above($breakpoint-desktop) {
+        display: none;
+    }
+}
