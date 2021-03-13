@@ -198,8 +198,8 @@ header a {
 
 .generated.hidden {
   pointer-events: none;
-  -webkit-transform: translateY(100px);
-          transform: translateY(100px);
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
   opacity: 0;
 }
 
