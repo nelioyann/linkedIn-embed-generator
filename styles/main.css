@@ -233,6 +233,6 @@ button {
 
 iframe {
   height: 800px;
-  width: clamp(300px, 20vw, 600px);
+  width: clamp(300px, 25vw, 600px);
 }
 /*# sourceMappingURL=main.css.map */
