@@ -168,6 +168,23 @@ body {
   background: #484848;
 }
 
+header {
+  text-align: center;
+}
+
+@media screen and (max-width: 62em) {
+  header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 1em 0;
+  }
+}
+
 header a {
   background-color: transparent;
   border: 2px solid #222;
