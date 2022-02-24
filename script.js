@@ -42,6 +42,7 @@ const APP = {
   },
   getInput(e){
     e.preventDefault();
+    plausible("Generated");
     let test = "https://www.linkedin.com/posts/association-prisme_local-accompagnement-associationprisme-activity-6775784238177390592-tGEg/";
     APP.code = APP.getCode(APP.elInput.value)
     APP.elPreview.innerHTML = APP.code
