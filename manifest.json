@@ -1,5 +1,6 @@
 {
   "name": "LinkedIn Embed Generator",
+  "description": "Linkedin Embed Generator is an application that allows you to generate an embed code for your Linkedin posts. To do this simply type in your post URL and the application will automatically generate the embed code.",
   "short_name": "LinkedIn Embed",
   "start_url": "/index.html",
   "display": "standalone",
