@@ -41,20 +41,19 @@
       <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect width="50" height="50" rx="4" fill="#4B72E3" />
       </svg>
-      Linkedin Embed Generator
+      <h1>Linkedin Embed Code Generator</h1>
     </a>
 
   </header>
-  <main data-layout="stack box" data-layout-props="centered" style="--space: var(--space-xl);">
-    <form class="generator" data-layout="stack" method="post" style="--space: var(--space-s);">
+  <main data-layout="stack box" data-layout-props="centered" style="--space: var(--space-2xl);">
+    <form class="generator" data-layout="stack" method="dialog" style="--space: var(--space-s);">
       <div data-field>
-        <label for="url" data-layout="stack" style="--space: inherit;">
-          URL of post
+        <label for="url" data-layout="stack" style="--space: var(--space-xs);">
+          <b>Link to your LinkedIn post</b>
+          <small data-field-hint>It should start with https://www.linkedin.com/posts... </small>
         </label>
         <input data-field-input required="" id="url" name="url"
-          value="https://www.linkedin.com/posts/javascript-developer_activity-6930515387167993856-17_7"
           class="generator_input" type="url">
-        <small data-field-hint>It starts with <i>https://www.linkedin.com/posts/...</i></small>
       </div>
       <button data-variant="primary" type="submit">Get code</button>
     </form>
@@ -65,25 +64,34 @@
           <summary>
             What is this tool ?
           </summary>
-          <p>LinkedIn Embedded Viewer is a tool to make your pre posted content on Linkedin visible on your website by
-            simply
-            generating an embed code.</p>
+          <p>LinkedIn Embed Code Generator is a tool to make your Linkedin posts visible on your website.</p>
         </details>
         <details>
           <summary>Why use this tool ? </summary>
-          <p>As you are probably aware, LinkedIn already provides embed snippets. Still, not all linkedin posts provide
-            code to add them to websites but technically it is feasible.
-            This app comes into play for such posts. Utilizing the LinkedIn pattern, it generates a snippet that that
-            you
-            can paste into your website.
+          <p>LinkedIn natively provides embed code snippets for some posts. This app comes into play whenever your posts do not have this feature.
+            From the link to your post, it generates an iFrame HTML code that you can use to embed your posts into your website. The source code is available on 
+            <span>
+              <a rel="noopener" alt="Github repo" target="_blank"
+                href="https://github.com/nelioyann/linkedIn-embed-generator">Github</a> if you are interested.
+            </span>
           </p>
         </details>
         <details>
           <summary>How to use this tool ?</summary>
           <ol>
-            <li>Get the URL link of your post.</li>
-            <li>Paste it in the field below then generate code.</li>
-            <li>Copy and paste the generated code on your website. And see the magic happen ✨</li>
+            <li>Navigate to the post you want to embed.</li>
+            <li>Click the
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" style="display: inline-block;">
+                  <title>Three dots icon</title>
+                  <path
+                    d="M14 12a2 2 0 1 1-2-2 2 2 0 0 1 2 2zM4 10a2 2 0 1 0 2 2 2 2 0 0 0-2-2zm16 0a2 2 0 1 0 2 2 2 2 0 0 0-2-2z" />
+                </svg>
+                <b>More</b>
+              icon in the top right corner of the post.
+            </li>
+            <li>If there is an <b>Embed this post</b> option you can use it. If not, click <b>Copy link to
+                post.</b></li>
+            <li>You can then paste that link here to generate an embed code.</li>
           </ol>
         </details>
       </div>
@@ -91,10 +99,10 @@
 
 
     <dialog id="dialog">
-      <form method="dialog" style="--min-height: 25rem; --border-width: 0rem; --space: var(--space-s);"
+      <form method="dialog" style="--min-height: 70vh; --border-width: 0rem; --space: var(--space-s);"
         data-layout="cover stack" data-layout-props="noPad" class="generated hidden">
         <header data-layout="box cluster" data-layout-props="invert">
-          <h2>Result</h2>
+          <h2>Embed this post</h2>
           <button class="box" type="submit">
             <span>X</span>
           </button>
@@ -103,41 +111,38 @@
           <div>
             <h3>Generated code</h3>
             <p>Place this code wherever you want the post to appear on your page.</p>
-            <code style="--space: 0.15rem;" class="code_container">
+            <div style="--space: 0.15rem;" class="code_container">
               <pre  class="code">Empty</pre>
-            </code>
+            </div>
           </div>
-          <div data-revealable="visible:false" style="--safe-height: 20rem;" class="preview_wrapper">
+          <div data-revealable="visible:false" style="--safe-height: 30rem;" class="preview_wrapper">
             <h3>Preview</h3>
-            <p>This code will look like this</p>
+            <small>To see the preview, you may need to turn off your ad blocker.</small>
             <div style="--space: 0.15rem;" data-layout="box" class="preview">
-              <span>⚠ If the preview does not adblocker might prevent the display of a preview.</span>
             </div>
           </div>
         </article>
         <footer data-layout="box cluster" data-layout-props="invert">
           <button autofocus type="button" data-variant="primary" class="copier">Copy code</button>
-          <button autofocus type="button" class="previewer">Preview the result</button>
+          <button type="button" class="previewer">Preview the result</button>
         </footer>
       </form>
     </dialog>
 
   </main>
-  <footer data-layout="box">
+  <footer data-layout="cluster box">
     <span>Developed by
-      <a rel="noopener" target="_blank" href="https://yannicknana.fr">Yannick Nana</a>
+      <a rel="noopener" target="_blank" href="https://yannicknana.fr/?utm_source=lecg">Yannick Nana</a>
       &copy; 2020-present.
     </span>
+
     <span>
-      <a rel="noopener" alt="Github repo" target="_blank"
-        href="https://github.com/nelioyann/linkedIn-embed-generator">Open source.</a>
-    </span>
-    <span>
-      <a rel="noopener" alt="Report an issue" target="_blank" href="https://yannicknana.fr/#contact">Report an
+      <a rel="noopener" target="_blank" href="https://yannicknana.fr/#contact/?utm_source=lecg">Report an
         issue.</a>
     </span>
   </footer>
-  <script src="./script.js"></script>
+  <script defer src="dialog-polyfill.js"></script>
+  <script defer src="./script.js"></script>
 </body>
 
 </html>
