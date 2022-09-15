@@ -1,6 +1,6 @@
 
 // Label des fichiers statiques to precache
-const staticCacheName = "site-static-v8"
+const staticCacheName = "site-static-v9"
 
 // Fichier qui seront cacher
 const assets = [
@@ -11,9 +11,6 @@ const assets = [
     '/scripts/script.js',
     '/images/icons/favicon-196.png',
     '/images/icons/favicon-180.png'
-
-    
-    
 ]
 // Service worker installation
 self.addEventListener("install", event=>{

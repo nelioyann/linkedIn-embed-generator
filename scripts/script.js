@@ -60,7 +60,6 @@ const APP = {
     }).catch(err => alert("Something went wrong, copy the code manually"));
   },
   showPreview(){
-    console.log("Display preview");
       document.querySelector(".preview_wrapper").dataset.revealable = "visible:true";
   }
 };
