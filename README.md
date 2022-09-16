@@ -13,8 +13,8 @@ Use regex magic and pattern analysis to generate embed snippets from post Urls.
 
 ## Roadmap
 
-[x] Wrap snippet in custom view
-[ ] Add customizable `View on Linkedin` button
-[ ] Refactor project in Eleventy
-[ ] Add Contact form
-[ ] Enhance PWA install prompt
+- Wrap snippet in custom view
+- Add customizable `View on Linkedin` button
+- Refactor project in Eleventy
+- Add Contact form
+- Enhance PWA install prompt
