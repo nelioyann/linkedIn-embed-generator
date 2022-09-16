@@ -139,7 +139,7 @@ h6 {
   filter: invert(100%);
 }
 
-/*----------  Center Layout TODO:  ----------*/
+/*----------  Center Layout ----------*/
 
 [data-layout~="center"] {
   box-sizing: content-box;
@@ -179,7 +179,7 @@ h6 {
   ); /*Defaulting to 1em to take advatange of the current font size */
 }
 
-/*----------  Cover Layout FIXME: move noPad  ----------*/
+/*----------  Cover Layout  ----------*/
 [data-layout~="cover"] {
   display: flex;
   flex-direction: column;
@@ -279,7 +279,7 @@ header a{
   --border-thin: 0;
   font-size: var(--step--1);
   font-weight: normal;
-  width: max-content;
+  width: fit-content;
 }
 small, footer {
   font-size: var(--step--1);
@@ -358,7 +358,7 @@ pre {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--gray-900);
+  background: var(--color-primary);
   border-radius: 5px;
 }
 
@@ -428,15 +428,9 @@ dialog > form > header button {
   stroke-width: 3px;
   min-width: 0px;
 }
-
 .preview{
   overflow: auto;
   height: 20rem;
-}
-iframe {
-  min-height: var(--min-height, 20rem);
-  width: min(100%, 20rem);
-  /* pointer-events: none; */
 }
 
 @keyframes slide-in-down {
@@ -489,5 +483,20 @@ details > summary::-webkit-details-marker {
 
 summary {
   cursor: pointer;
+}
+
+[data-code]{
+  --blue: #008;
+  --green: #080;
+  --red: #606;
+}
+[data-code="tag"]{
+  color: var(--blue);
+}
+[data-code="attr"]{
+  color: var(--red);
+}
+[data-code="value"]{
+  color: var(--green);
 }
 
