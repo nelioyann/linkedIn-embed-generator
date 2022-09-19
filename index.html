@@ -2,40 +2,39 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LinkedIn Embed Generator</title>
-  <link rel="manifest" href="manifest.json">
+  <link rel="manifest" href="manifest.json" />
+  <meta name="application-name" content="LinkedIn Embed Generator">
   <meta name="description"
-    content="Linkedin Embed Generator is an application that allows you to generate an embed code for your Linkedin posts. To do this simply type in your post URL and the application will automatically generate the embed code.">
-
-
-
-  <meta property="og:image" content="https://linkedin-embed.netlify.app/images/thumbnail.png">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://linkedin-embed.netlify.app">
-  <meta property="og:title" content="LinkeIn Embed Generator">
+    content="Linkedin Embed Generator is an application that allows you to generate an embed code for your Linkedin posts. To do this simply type in your post URL and the application will automatically generate the embed code." />
+  <meta property="og:image" content="https://linkedin-embed.netlify.app/images/thumbnail.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://linkedin-embed.netlify.app" />
+  <link rel="canonical" href="https://linkedin-embed.netlify.app" />
+  <meta property="og:title" content="LinkeIn Embed Generator" />
   <meta property="og:description"
-    content="Linkedin Embed Generator is an application that allows you to generate an embed code for your Linkedin posts. To do this simply type in your post URL and the application will automatically generate the embed code.">
+    content="Linkedin Embed Generator is an application that allows you to generate an embed code for your Linkedin posts. To do this simply type in your post URL and the application will automatically generate the embed code." />
   <!-- Twitter _ Image size: 1200x630 -->
-  <meta name="twitter:image" content="https://linkedin-embed.netlify.app/images/thumbnail.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@nelioyann">
-  <meta name="twitter:creator" content="@nelioyann">
-  <meta name="twitter:text:title" content="LinkeIn Embed Generator">
+  <meta name="twitter:image" content="https://linkedin-embed.netlify.app/images/thumbnail.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@nelioyann" />
+  <meta name="twitter:creator" content="@nelioyann" />
+  <meta name="twitter:text:title" content="LinkeIn Embed Generator" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="icon" type="image/png" sizes="196x196" href="images/icons/favicon-196.png" />
+  <meta name="theme-color" content="#4a70e3" />
+  <link rel="apple-touch-icon" href="images/icons/apple-icon-180.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
 
-  <link rel="stylesheet" href="styles/style.css">
-  <link rel="icon" type="image/png" sizes="196x196" href="images/icons/favicon-196.png">
-
-  <link rel="apple-touch-icon" href="images/icons/apple-icon-180.png">
-
-  <meta name="apple-mobile-web-app-capable" content="yes">
-
-  <script>navigator.serviceWorker.register("sw.js")</script>
+  <script>
+    navigator.serviceWorker.register("sw.js");
+  </script>
 </head>
 
-<body data-layout="center cover" data-layout-props="noPad" style="--border-width: 0;">
+<body data-layout="center cover" data-layout-props="noPad" style="--border-width: 0">
   <header data-layout="box">
     <a data-layout="cluster" href="/index.html">
       <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -43,47 +42,49 @@
       </svg>
       <h1>Linkedin Embed Code Generator</h1>
     </a>
-
   </header>
-  <main data-layout="stack box" data-layout-props="centered" style="--space: var(--space-2xl);">
-    <form class="generator" data-layout="stack" method="dialog" style="--space: var(--space-s);">
+  <main data-layout="stack box" data-layout-props="centered" style="--space: var(--space-2xl)">
+    <form class="generator" data-layout="stack" method="dialog" style="--space: var(--space-s)">
       <div data-field>
-        <label for="url" data-layout="stack" style="--space: var(--space-xs);">
-          <b>Link to your LinkedIn post</b>
-          <small data-field-hint>It should start with https://www.linkedin.com/posts... </small>
+        <label for="url" data-layout="stack" style="--space: var(--space-xs)">
+          <b>Enter LinkedIn post Url</b>
         </label>
-        <input data-field-input required="" id="url" name="url" class="generator_input" type="url">
+        <small data-field-hint>It should start with: <i>https://www.linkedin.com/posts...</i>
+        </small>
+        <input data-field-input required="true" id="url" name="url" class="generator_input" type="url" />
       </div>
-      <button data-variant="primary" type="submit">Get code</button>
+      <button data-variant="primary" type="submit">Generate snippet</button>
     </form>
     <div data-accordion>
       <h2>FAQ</h2>
       <div>
         <details>
-          <summary>
-            What is this tool ?
-          </summary>
-          <p>LinkedIn Embed Code Generator is a tool to make your Linkedin posts visible on your website.</p>
+          <summary>What is Linkedin Embed Code Generator ?</summary>
+          <p>
+            LinkedIn Embed Code Generator is a free tool that makes it
+            possible to embed Linkedin posts on your website.
+          </p>
         </details>
         <details>
-          <summary>Why use this tool ? </summary>
-          <p>LinkedIn natively provides embed code snippets for some posts. This app comes into play whenever your posts
-            do not have this feature.
-            From the link to your post, it generates an iFrame HTML code that you can use to embed your posts into your
-            website. The source code is available on
-            <span>
-              <a rel="noopener" alt="Github repo" target="_blank"
-                href="https://github.com/nelioyann/linkedIn-embed-generator">Github</a> if you are interested.
-            </span>
+          <summary>Why use this tool ?</summary>
+          <p>
+            LinkedIn provides embed code snippets for some posts. This app comes into play whenever yours do not have
+            this feature.
+            From the link to your post, we generates an iFrame HTML code that you can use to embed your posts into your
+            website.
+            The source code for this app is available on
+            <a alt="Github repository of this app" target="_blank"
+              href="https://github.com/nelioyann/linkedIn-embed-generator">Github</a>.
           </p>
         </details>
         <details>
           <summary>How to use this tool ?</summary>
           <ol>
-            <li>Navigate to the post you want to embed.</li>
-            <li>Click the
+            <li>Navigate to the post you want to embed on LinkedIn.</li>
+            <li>
+              Click the
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                style="display: inline-block;">
+                style="display: inline-block">
                 <title>Three dots icon</title>
                 <path
                   d="M14 12a2 2 0 1 1-2-2 2 2 0 0 1 2 2zM4 10a2 2 0 1 0 2 2 2 2 0 0 0-2-2zm16 0a2 2 0 1 0 2 2 2 2 0 0 0-2-2z" />
@@ -91,18 +92,24 @@
               <b>More</b>
               icon in the top right corner of the post.
             </li>
-            <li>If there is an <b>Embed this post</b> option you can use it. If not, click <b>Copy link to
-                post.</b></li>
-            <li>You can then paste that link here to generate an embed code.</li>
+            <li>
+              If there is an <b>Embed this post</b> option you can use it. If
+              not, click <b>Copy link to post.</b>
+            </li>
+            <li>
+              You can then insert that link in the field above to generate an
+              embed code snippet.
+            </li>
           </ol>
         </details>
       </div>
     </div>
-
-
     <dialog id="dialog">
-      <form method="dialog" style="--min-height: 70vh; --border-width: 0rem; --space: var(--space-s);"
-        data-layout="cover stack" data-layout-props="noPad" class="generated hidden">
+      <form method="dialog" style="
+            --min-height: 70vh;
+            --border-width: 0rem;
+            --space: var(--space-s);
+          " data-layout="cover stack" data-layout-props="noPad" class="generated hidden">
         <header data-layout="box cluster" data-layout-props="invert">
           <h2>Embed this post</h2>
           <button class="box" type="submit">
@@ -112,35 +119,41 @@
         <article data-layout="box stack" data-layout-props="centered" class="code_wrapper">
           <div>
             <h3>Generated code</h3>
-            <p>Place this code wherever you want the post to appear on your page.</p>
-            <div style="--space: 0.15rem;" class="code_container">
-              <pre class="code">Empty</pre>
+            <p>
+              Place this embed code wherever you want the post to appear on your
+              page between <code>&lt;body&gt;&lt;/body&gt;</code> tags.
+            </p>
+            <div style="--space: 0.15rem" class="code_container">
+              <pre class="code">If you are seeing this, something went wrong. Please, verify that the entered Url is valid.</pre>
             </div>
           </div>
-          <div data-revealable="visible:false" style="--safe-height: 30rem;" class="preview_wrapper">
+          <div data-revealable="visible:false" style="--safe-height: 30rem" class="preview_wrapper">
             <h3>Preview</h3>
-            <small>To see the preview, you may need to turn off your ad blocker.</small>
-            <div style="--space: 0.15rem;" data-layout="box" class="preview">
-            </div>
+            <small>To see the preview, you may need to turn off your ad
+              blocker.</small>
+            <div style="--space: 0.15rem" data-layout="box" class="preview"></div>
           </div>
         </article>
         <footer data-layout="box cluster" data-layout-props="invert">
-          <button autofocus type="button" data-variant="primary" class="copier">Copy code</button>
+          <button autofocus type="button" data-variant="primary" class="copier">
+            Copy code
+          </button>
           <button type="button" class="previewer">Preview the result</button>
         </footer>
       </form>
     </dialog>
-
   </main>
-  <footer data-layout="cluster box">
-    <span>Developed by
-      <a rel="noopener" target="_blank" href="https://yannicknana.fr/?utm_source=lecg">Yannick Nana</a>
-      &copy; 2020-present.
-    </span>
-
-    <span>
-      <a rel="noopener" target="_blank" href="https://yannicknana.fr/#contact">  Something went wrong ?</a>
-    </span>
+  <footer data-layout="box">
+    <p>
+      <span itemscope itemtype="https://schema.org/Person">
+        Developed and maintained by
+        <a target="_blank" itemprop="url" href="https://yannicknana.fr">Yannick Nana</a>.
+      </span>
+      <span>
+        Something went wrong or you have a suggestion ?
+        <a target="_blank" href="https://yannicknana.fr/#contact">Get in touch</a>.
+      </span>
+    </p>
   </footer>
   <script defer src="./scripts/dialog-polyfill.js"></script>
   <script defer src="./scripts/script.js"></script>

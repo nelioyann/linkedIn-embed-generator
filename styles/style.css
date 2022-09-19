@@ -139,7 +139,7 @@ h6 {
   filter: invert(100%);
 }
 
-/*----------  Center Layout TODO:  ----------*/
+/*----------  Center Layout ----------*/
 
 [data-layout~="center"] {
   box-sizing: content-box;
@@ -179,7 +179,7 @@ h6 {
   ); /*Defaulting to 1em to take advatange of the current font size */
 }
 
-/*----------  Cover Layout FIXME: move noPad  ----------*/
+/*----------  Cover Layout  ----------*/
 [data-layout~="cover"] {
   display: flex;
   flex-direction: column;
@@ -227,13 +227,11 @@ h6 {
 =            Customizations            =
 =============================================*/
 :root {
-  --color-primary: hsl(225, 73%, 59%);
+  --color-primary: #4a70e3;
   --color-light: var(--gray-50);
   --color-dark: var(--gray-900);
-
   --color-text: var(--gray-600);
-  --color-heading: hsl(225deg, 15%, 15%);
-
+  --color-heading: #21232c;
   --color-muted: var(--gray-100);
   --color-muted-dark: var(--gray-200);
   --border-radius: 0.2rem;
@@ -242,6 +240,10 @@ h6 {
 
   --bezier-snappy: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   --bezier-swift: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  --font-sans-serif: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+  --font-serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  --font-mono: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
 }
 *,
 :after,
@@ -259,16 +261,25 @@ input {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   outline: none;
-  border: 1px solid;
+  border: var(--border-thin) solid;
   border-color:  var(--gray-600);
+}
+a{
+  text-decoration: none;
+  color: var(--color-primary);
+}
+a:not(:focus){
+  border-bottom: var(--border-thin) dotted;
 }
 input:focus-visible{
   box-shadow: 0 0 0 0.2rem var(--color-focus-shadow);
-  border-color: 1px solid var(--color-focus);
+  border-color: var(--border-thin) solid var(--color-focus);
 }
-header h1{
+header a{
+  --border-thin: 0;
   font-size: var(--step--1);
-  font-weight: 400;
+  font-weight: normal;
+  width: fit-content;
 }
 small, footer {
   font-size: var(--step--1);
@@ -285,7 +296,6 @@ button {
   cursor: pointer;
   padding-left: 1rem;
   padding-right: 1rem;
-  /* color: var(--color-dark); */
 
   /* transition-property: all; */
 }
@@ -309,21 +319,22 @@ button:hover {
 }
 :where(button, a):where(:not(:active)):focus-visible {
   outline-offset: 5px;
+  outline-color: var(--color-primary);
   /* box-shadow: 0 0 0 0.2rem var(--color-focus-shadow); */
 }
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: var(--font-sans-serif);
   font-size: var(--step-0);
   background-color: var(--color-light);
 }
 h1 {
-  /* font-size: 1rem; */
   font-weight: 600;
 }
 h2 {
   font-weight: 400;
 }
 pre {
+  font-family: var(--font-mono);
   background: var(--gray-200);
   border: 1px solid var(--gray-500);
   border-radius: var(--border-radius);
@@ -347,7 +358,7 @@ pre {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--gray-900);
+  background: var(--color-primary);
   border-radius: 5px;
 }
 
@@ -417,15 +428,9 @@ dialog > form > header button {
   stroke-width: 3px;
   min-width: 0px;
 }
-
 .preview{
   overflow: auto;
   height: 20rem;
-}
-iframe {
-  min-height: var(--min-height, 20rem);
-  width: min(100%, 20rem);
-  /* pointer-events: none; */
 }
 
 @keyframes slide-in-down {
@@ -453,7 +458,7 @@ iframe {
   content: "\203A";
   position: absolute;
   right: var(--space-s);
-  font-size: var(--step-1);
+  /* font-size: var(--step-1); */
   transform-origin: center;
   transform: rotate(90deg);
   transition: transform 0.3s var(--bezier-snappy) 0.1s;
@@ -465,7 +470,8 @@ iframe {
   padding-left: var(--space-l);
   padding-top: var(--space-xs);
   color: var(--gray-700);
-  font-size: var(--step--1);
+  /* font-size: var(--step--1); */
+  font-family: var(--font-serif);
 }
 details > summary::-webkit-details-marker,
 details > summary::marker {
@@ -477,5 +483,20 @@ details > summary::-webkit-details-marker {
 
 summary {
   cursor: pointer;
+}
+
+[data-code]{
+  --blue: #008;
+  --green: #080;
+  --red: #606;
+}
+[data-code="tag"]{
+  color: var(--blue);
+}
+[data-code="attr"]{
+  color: var(--red);
+}
+[data-code="value"]{
+  color: var(--green);
 }
 

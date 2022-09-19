@@ -1,13 +1,20 @@
 # Linkedin Embed Generator
 
-Simple website that generate HTML code from your post links. 
+Simple website that generate HTML embed code snippets from your LinkedIn post Urls. 
 Integrate your LinkedIn posts more easily on your websites.
 
-## Context
+## Problem
 
-LinkedIn doesn't provide the embed code for all posts yet. 
-However, all posts do support web embed. 
+LinkedIn doesn't provide embed code snippets for all posts yet.
 
 ## Solution
 
-Use regex magic and pattern analysis to generate embed post from links.
+Use regex magic and pattern analysis to generate embed snippets from post Urls.
+
+## Roadmap
+
+- Wrap snippet in custom view
+- Add customizable `View on Linkedin` button
+- Refactor project in Eleventy
+- Add Contact form
+- Enhance PWA install prompt

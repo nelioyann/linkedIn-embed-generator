@@ -26,13 +26,26 @@ const APP = {
       }
       m.forEach((match) => {
         if (match.length > 3) {
-          prettyCode = `<span style="color: #008;">&lt;iframe</span> 
-<span style="color: #606;">src=</span><span style="color: #080;">"https://www.linkedin.com/embed/feed/update/urn:li:activity:${match}"</span>
-<span style="color: #008;">&gt;&lt;/iframe&gt;</span>`;
-          code = `<iframe 
-          src="https://www.linkedin.com/embed/feed/update/urn:li:activity:${match}" 
-          frameborder="0" title="LinkedIn">
-          </iframe>`;
+          prettyCode = 
+`<span data-code="tag">&lt;div</span><span data-code="attr"> style=</span><span data-code="value" >"position:relative;overflow:hidden;padding-top:56.25%;"</span><span data-code="tag" >&gt;</span>
+  <span data-code="tag">&lt;iframe</span> 
+  <span data-code="attr"> frameborder=</span><span data-code="value">"0"</span>
+  <span data-code="attr"> style=</span><span data-code="value">"position:absolute;top:0;left:0;width:100%;height:100%;border:0;"</span>
+   <span data-code="attr">src=</span><span data-code="value">"https://www.linkedin.com/embed/feed/update/urn:li:activity:${match}"</span>
+  <span data-code="tag">&gt;&lt;/iframe&gt;</span>
+<span data-code="tag">&lt;/div&gt;</span>
+`;
+
+
+
+          code =
+`<div style="position:relative;overflow:hidden;padding-top:56.25%;">
+  <iframe
+    style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+    src="https://www.linkedin.com/embed/feed/update/urn:li:activity:${match}" 
+    frameborder="0" title="LinkedIn">
+  </iframe>
+</div>`;
         }
       });
     }
@@ -57,10 +70,12 @@ const APP = {
   copyCode() {
     navigator.clipboard.writeText(APP.code).then(res => {
       alert("Embed code successfully copied");
-    }).catch(err => alert("Something went wrong, copy the code manually"));
+    }).catch(err => {
+      alert("Something went wrong, copy the code manually");
+      plausible("Error on code copy")
+    });
   },
   showPreview(){
-    console.log("Display preview");
       document.querySelector(".preview_wrapper").dataset.revealable = "visible:true";
   }
 };
