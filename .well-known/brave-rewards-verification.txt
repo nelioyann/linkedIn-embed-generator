@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: linkedin-embed.netlify.app
+Token: ce9ee7cf87d09dffa962efeb85c50ac6cdf4d3e9d1799dd83eb7e376e4a10ef6
